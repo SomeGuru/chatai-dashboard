@@ -91,6 +91,7 @@
     "portable": {
       "artifactName": "ChatAI-Dashboard-${version}-Portable.exe"
     },
+    "publish": "never",
     "compression": "maximum",
     "removePackageScripts": true
   }
