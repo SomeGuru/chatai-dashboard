@@ -1,10 +1,10 @@
 {
   "name": "chatai-dashboard",
   "version": "2.3.0",
-  "description": "ChatAI Dashboard — Your gateway to every AI model, by IT2Innovations / TheLarios Designs",
+  "description": "ChatAI Dashboard - Your gateway to every AI model, by IT2Innovations / TheLarios Designs",
   "main": "main.js",
   "author": {
-    "name": "Mike Larios — IT2Innovations / TheLarios Designs",
+    "name": "Mike Larios - IT2Innovations / TheLarios Designs",
     "email": "mike@thelarios.com",
     "url": "https://www.thelarios.com"
   },
@@ -19,22 +19,18 @@
     "build:all":   "electron-builder --win --linux",
     "pack":        "electron-builder --dir"
   },
-  "dependencies": {
-    "electron": "^29.4.0"
-  },
   "devDependencies": {
+    "electron":         "^29.4.0",
     "electron-builder": "^24.13.3"
   },
   "build": {
     "appId": "com.it2innovations.chatai-dashboard",
     "productName": "ChatAI Dashboard",
-    "copyright": "Copyright © 2026 IT2Innovations / TheLarios Designs",
-
+    "copyright": "Copyright c 2026 IT2Innovations / TheLarios Designs",
     "directories": {
       "output": "dist",
       "buildResources": "build-resources"
     },
-
     "files": [
       "main.js",
       "preload.js",
@@ -43,32 +39,19 @@
       "!**/*.map",
       "!**/node_modules/**"
     ],
-
     "extraMetadata": {
       "main": "main.js"
     },
-
     "win": {
       "target": [
-        {
-          "target": "nsis",
-          "arch": ["x64"]
-        },
-        {
-          "target": "portable",
-          "arch": ["x64"]
-        },
-        {
-          "target": "zip",
-          "arch": ["x64"]
-        }
+        { "target": "nsis",     "arch": ["x64"] },
+        { "target": "portable", "arch": ["x64"] }
       ],
       "icon": "assets/icon.ico",
       "publisherName": "IT2Innovations",
       "verifyUpdateCodeSignature": false,
       "requestedExecutionLevel": "asInvoker"
     },
-
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
@@ -83,25 +66,14 @@
       "installerSidebar": "build-resources/sidebar.bmp",
       "deleteAppDataOnUninstall": false
     },
-
     "linux": {
       "target": [
-        {
-          "target": "AppImage",
-          "arch": ["x64"]
-        },
-        {
-          "target": "deb",
-          "arch": ["x64"]
-        },
-        {
-          "target": "tar.gz",
-          "arch": ["x64"]
-        }
+        { "target": "AppImage", "arch": ["x64"] },
+        { "target": "deb",      "arch": ["x64"] }
       ],
       "icon": "assets/icons/",
       "category": "Network",
-      "description": "ChatAI Dashboard — access every major AI from one elegant app",
+      "description": "ChatAI Dashboard - access every major AI from one elegant app",
       "maintainer": "Mike Larios <mike@thelarios.com>",
       "desktop": {
         "Name": "ChatAI Dashboard",
@@ -109,20 +81,16 @@
         "Categories": "Network;Utility;"
       }
     },
-
     "appImage": {
       "artifactName": "ChatAI-Dashboard-${version}.AppImage"
     },
-
     "deb": {
       "artifactName": "ChatAI-Dashboard-${version}.deb",
       "depends": ["libgtk-3-0", "libnotify4", "libnss3", "libxss1", "libxtst6", "xdg-utils", "libatspi2.0-0", "libuuid1"]
     },
-
     "portable": {
       "artifactName": "ChatAI-Dashboard-${version}-Portable.exe"
     },
-
     "compression": "maximum",
     "removePackageScripts": true
   }
