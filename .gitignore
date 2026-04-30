@@ -42,3 +42,4 @@ window-state.json
 
 # Optional: lock files (keep package-lock.json, ignore yarn.lock if using npm)
 yarn.lock
+release.bat 
